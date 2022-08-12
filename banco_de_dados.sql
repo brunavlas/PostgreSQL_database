@@ -6,14 +6,14 @@ CREATE DATABASE "TESTE"
     ENCODING = 'UTF8'
     CONNECTION LIMIT = -1;
 
-CREATE SCHEMA gobuzz
+CREATE SCHEMA teste1
     AUTHORIZATION postgres;
 
 
 /* Criando a tabela USERS */
 
 
-CREATE TABLE gobuzz."TB_USERS"
+CREATE TABLE teste1."TB_USERS"
 (
     id integer GENERATED ALWAYS AS IDENTITY NOT NULL,
     nome character varying(30) NOT NULL,
@@ -26,17 +26,17 @@ CREATE TABLE gobuzz."TB_USERS"
 
 TABLESPACE pg_default;
 
-ALTER TABLE IF EXISTS gobuzz."TB_USERS"
+ALTER TABLE IF EXISTS teste1."TB_USERS"
     OWNER to postgres;
 
-ALTER TABLE IF EXISTS gobuzz."TB_USERS"
+ALTER TABLE IF EXISTS teste1."TB_USERS"
     ADD CONSTRAINT uk_id_users UNIQUE (id);
 
 
 /* Criando a tabela LOGIN_IPS */
 
 
-CREATE TABLE gobuzz."TB_LOGIN_IPS"
+CREATE TABLE teste1."TB_LOGIN_IPS"
 (
     id integer GENERATED ALWAYS AS IDENTITY NOT NULL,
     usuario character varying(30) NOT NULL,
@@ -48,13 +48,13 @@ CREATE TABLE gobuzz."TB_LOGIN_IPS"
 
 TABLESPACE pg_default;
 
-ALTER TABLE IF EXISTS gobuzz."TB_LOGIN_IPS"
+ALTER TABLE IF EXISTS teste1."TB_LOGIN_IPS"
     OWNER to postgres;
 
-ALTER TABLE IF EXISTS gobuzz."TB_LOGIN_IPS"
+ALTER TABLE IF EXISTS teste1."TB_LOGIN_IPS"
     ADD CONSTRAINT uk_id_loginips UNIQUE (id);
 
-ALTER TABLE IF EXISTS gobuzz."TB_LOGIN_IPS"
+ALTER TABLE IF EXISTS teste1."TB_LOGIN_IPS"
     ADD CONSTRAINT fk_loginips_users FOREIGN KEY (user_id)
     REFERENCES gobuzz."TB_USERS" (id) MATCH SIMPLE
     ON UPDATE NO ACTION
