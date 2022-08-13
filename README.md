@@ -1,6 +1,8 @@
 # PostgreSQL_database
 Desafio para processo seletivo utilizando o PostgreSQL.
 
+## Sobre
+
 Criação de um banco de dados no PostgreSQL com os seguintes requisitos:
 
 1. Uma tabela "Users", com colunas de identificação, especialmente uma coluna de id.
@@ -14,3 +16,15 @@ Criação de um banco de dados no PostgreSQL com os seguintes requisitos:
 3. Insira dados genéricos em cada tabela.
 
 4. Dado um IP específico (por exemplo "G"), escreva uma query que liste apenas os usuários cujo último acesso foi com esse IP (origem_ip = 'G').
+
+## Tecnologia
+
+- PostgreSQL
+  
+## Etapas
+  
+- [x] Criação de uma database e um schema teste no PostgreSQL;
+- [x] Criação das tabelas de usuário e de login incluindo as colunas requeridas no desafio;
+- [x] Inclusão das constraints 'primary key' e 'foreign key' para relacionar as duas tabelas além da constraint 'unique';
+- [x] Inserção de dados genéricos aleatórios nas tabelas;
+- [x] Execução da query de consulta utilizando 'join', 'where', 'group by' e 'order by'.
